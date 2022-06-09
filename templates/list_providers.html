@@ -9,16 +9,17 @@
     <a class="nav-link" href="/list_providers/create_provider/">Crear nuevo proveedor</a>
 </li> -->
 
-
-<form class="form-inline my-2 my-lg-10" method="get" action="/list_providers/create_provider/">
+<div class="container">
+<form class="form-inline my-2 my-lg-1" method="get" action="/list_providers/create_provider/">
     <input class="btn btn-primary" type="submit" style="color: white" value="Crear nuevo proveedor" />
 </form>
-
-<form method="get" action=" /">
-    <input class="btn btn-primary" type="submit" style="color: white" value="Volver" />
+<form class="form-inline my-2 my-lg-1" method="get" action="/">
+    <input class="btn btn-primary" type="submit" style="color: white; margin-left: 0px;" value="Volver" />
 </form>
 
-<h2 style="margin-left:30rem">Estos son tus proveedores</h2>
+
+
+<h3 style="text-align: left;">Estos son tus proveedores</h3>
 <body>
 {{message}}
 
@@ -40,3 +41,4 @@
 
     </body>
     {% endblock %}
+</div>

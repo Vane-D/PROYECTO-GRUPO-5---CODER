@@ -5,32 +5,31 @@ Clientes
 {% endblock %}
 
 {% block contenido %}
-
-<form class="form-inline my-2 my-lg-10" method="get" action="/Client/create-client/">
-    <input class="btn btn-primary" type="submit" style="color: white" value="Carga de Clientes" />
-</form>
-
-<form method="get" action=" /">
-    <input class="btn btn-primary" type="submit" style="color: white" value="Volver" />
-</form>
-
+<div class="container">
+    <form class="form-inline my-2 my-lg-10" action="/Client/create-client/" method="get" style="margin-top: 25px;">
+        <input class="btn btn-primary" type="submit" style="color: white" value="Carga de Clientes" />
+    </form>
+    <form class="form-inline my-2 my-lg-10" action=" /" method="get" style="margin-top: 25px;">
+        <input class="btn btn-primary" type="submit" style="color: white; margin-left: 0px;" value="Volver" />
+    </form>
 
 
-<h2>Este es el listado de tus clientes</h2>
-<div class="d-flex" style="margin-top:5rem; margin-left:7rem">
-    {% for client_view in clientes %} &nbsp
 
-    <div class="card" style="width: 18rem;">
-        
-        <div class="card-body">
-            <h5 class="card-title">{{client_view.name}}</h5>
-            <p class="card-text">{{client_view.Cuit}}</p>
-            <p class="card-text">{{client_view.city}}</p>
-            <a href="#" class="btn btn-primary">Ver Detalle!</a>
+
+    <h3>Este es el listado de tus clientes</h3>
+    <div class="d-flex" style="text-align: center;">
+        {% for client_view in clientes %} &nbsp
+
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{client_view.name}}</h5>
+                <p class="card-text">{{client_view.Cuit}}</p>
+                <p class="card-text">{{client_view.city}}</p>
+                <a href="#" class="btn btn-primary">Ver Detalle!</a>
+            </div>
         </div>
+
+        {% endfor %}
     </div>
-
-    {% endfor %}
 </div>
-
 {% endblock %}

@@ -6,14 +6,15 @@ Agregar Proveedor
 
 {% block contenido %}
 {% if form %} 
-    <h2>Completá los datos del proveedor a cargar</h2>
+<div class="container">
+    <h3 style="margin-top: 50px; margin-bottom: 10px;">Completá los datos del proveedor a cargar</h3>
 
         <form method="POST" action="">
             {% csrf_token %} 
             <table>
                 {{form.as_table}}
             </table>
-            <input type="submit", value="Crear Proveedor">
+            <input type="submit" value="Crear Proveedor" style="margin-left: 140px; margin-top: 5px;" class="btn btn-primary">
         </form>
 {% elif new_provider %} 
 
@@ -27,7 +28,7 @@ Agregar Proveedor
         <h5 class="card-title">{{new_provider.name}}</h5>
         <p class="card-text"> {{new_provider.contact}}</p>
         <p class="card-text">{{new_provider.contact_number}}</p>
-        <p class="card-text" style="color:red">Realizar proxima compra {{new_provider.next_purchase}}</p>
+        <p class="card-text" style="color:red" >Realizar proxima compra {{new_provider.next_purchase}}</p>
     </div>
 </div>
 
@@ -37,3 +38,4 @@ Agregar Proveedor
     <input class="btn btn-primary" type="submit" style="color: white" value="Volver" />
 </form>
 {% endblock %}
+</div>
